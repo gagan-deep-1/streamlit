@@ -33,10 +33,10 @@ try:
 		st.write("##### Entity Table", data1)
 	data2 = pd.DataFrame(aliases[selected_indices],columns =['Alias',"Relevance(Alias)",'Frequency','Entity support count'])
 	with col2:
-		selected_indices = st.selectbox('Select Alias:', list(set(list(data2["Alias"]))))
-		st.write("##### Alias Table", data2)
-	data3 = pd.DataFrame(contexts[selected_indices],columns =['context',"node id"])
-	st.write("#### Contexts for Alias:",selected_indices)
+		selected_indices1 = st.selectbox('Select Alias:', list(set(list(data2["Alias"]))))
+		st.write("##### Alias Table for entity:",selected_indices, data2)
+	data3 = pd.DataFrame(contexts[selected_indices1],columns =['context',"node id"])
+	st.write("#### Contexts for Alias:",selected_indices1)
 	st.table(data3)
 	#st.write("Context Table", data3)
 except Exception as e:
