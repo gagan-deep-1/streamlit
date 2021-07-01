@@ -29,14 +29,13 @@ try:
 	data = pd.DataFrame(entities,columns =['Entity',"Relevance(entity)",'Frequency','Entity support count'])
 	data1 = data
 	with col1:
+		selected_indices = st.selectbox('Select Entity:', list(set(list(data["Entity"]))))
 		st.write("##### Entity Table", data1)
 	
 	with col2:
-		st.write("")
-		selected_indices = st.selectbox('Select Entity:', list(set(list(data["Entity"]))))
+		selected_indices = st.selectbox('Select Alias:', list(set(list(data2["Alias"]))))
 		data2 = pd.DataFrame(aliases[selected_indices],columns =['Alias',"Relevance(Alias)",'Frequency','Entity support count'])
 		st.write("##### Alias Table", data2)
-	selected_indices = st.selectbox('Select Alias:', list(set(list(data2["Alias"]))))
 	data3 = pd.DataFrame(contexts[selected_indices],columns =['context',"node id"])
 	st.write("#### Contexts for Alias:",selected_indices)
 	st.table(data3)
