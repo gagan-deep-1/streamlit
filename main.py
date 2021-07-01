@@ -26,7 +26,7 @@ try:
 	st.write("# Entities and Aliases")
 	entities, aliases, contexts = loadData("alias_detection_demo_APDO_fulltweets.json")
 	col1, col2 = st.beta_columns(2)
-	data = pd.DataFrame(entities,columns =['Entity',"Relevance(entity)",'Frequency','Entity support count'])
+	data = pd.DataFrame(entities,columns =['Entity',"Relevance(entity)",'Frequency','CNT'])
 	data1 = data
 	with col1:
 		selected_indices = st.selectbox('Select Entity:', list(set(list(data["Entity"]))))
