@@ -40,11 +40,6 @@ try:
 	st.write("#### Contexts for Alias:",selected_indices)
 	st.table(data3)
 	#st.write("Context Table", data3)
-except:
-    st.error(
-        """
-        **This demo requires internet access.**
-
-        Connection error:
-    """
+except Exception as e:
+    st.error(e
     )
