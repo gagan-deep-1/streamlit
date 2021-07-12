@@ -23,7 +23,7 @@ def loadData(path):
 	return entities, aliases, contexts
 
 try:
-	st.write("# Entities and Aliases")
+	st.write("# Entities and Aliases (Tweets)")
 	entities, aliases, contexts = loadData("alias_detection_demo_APDO_fulltweets.json")
 	col1, col2 = st.beta_columns(2)
 	data = pd.DataFrame(entities,columns =['Entity',"Relevance",'Frequency','CNT'])
