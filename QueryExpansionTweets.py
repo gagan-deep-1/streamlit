@@ -54,12 +54,10 @@ try:
 		values1 = st.slider(
 			'Select a range of values',
 			0.0, 1.0,(0.0, 1.0))
-		st.write('Values:', values1)
 	with col11:
 		values2 = st.slider(
 			'Select a range of values2',
 			0.0, 1.0, (0.0, 1.0))
-		st.write('Values:', values2)
 
 	data1 = data.loc[(data['specificity'] == selected_indices1) &  (data['linked_seed_keyword'].isin(selected_indices2)) & (data["Frequecy Score"] >= values1[0]) & (data["Frequecy Score"] <= values1[1]) & (data["Relevance Score"] >= values2[0]) & (data["Relevance Score"] <= values2[1]) ]
 	with col3:
