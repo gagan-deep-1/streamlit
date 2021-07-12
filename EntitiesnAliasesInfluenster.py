@@ -32,7 +32,7 @@ try:
 	with col1:
 		selected_indices = st.selectbox('Select Entity:', list(set(list(data["Entity"]))))
 		st.write("##### Entity Table")
-		st.dataframe(data=data1, height=300)
+		st.dataframe(data=data1, height=300,width = 1150)
 	data2 = pd.DataFrame(aliases[selected_indices],columns =['Alias',"Relevance(Alias)",'Frequency','Entity support count'])
 
 	with col2:
