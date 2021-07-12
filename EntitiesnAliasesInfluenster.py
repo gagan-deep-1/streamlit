@@ -28,7 +28,7 @@ try:
 	col1, col2 = st.beta_columns(2)
 	data = pd.DataFrame(entities,columns =['Entity',"Relevance",'Frequency','CNT'])
 	data1 = data
-	data1 = data1.style.set_properties(**{'font-size': '14pt',})
+	#data1 = data1.style.set_properties(**{'font-size': '14pt',})
 	with col1:
 		selected_indices = st.selectbox('Select Entity:', list(set(list(data["Entity"]))))
 		st.write("##### Entity Table",data1)
@@ -37,11 +37,11 @@ try:
 
 	with col2:
 		selected_indices1 = st.selectbox('Select Alias:', list(set(list(data2["Alias"]))))
-		data2 = data2.style.set_properties(**{'font-size': '14pt',})
+		#xdata2 = data2.style.set_properties(**{'font-size': '14pt',})
 		st.write("##### Alias Table for entity : ",selected_indices, data2)
 	data3 = pd.DataFrame(contexts[selected_indices1],columns =['context',"node id"])
 	st.write("#### Contexts for Alias:",selected_indices1)
-	data3 = data3.style.set_properties(**{'font-size': '14pt',})
+	#data3 = data3.style.set_properties(**{'font-size': '14pt',})
 	st.table(data3)
 	#st.write("Context Table", data3)
 except Exception as e:
