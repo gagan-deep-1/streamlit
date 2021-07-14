@@ -25,7 +25,8 @@ def loadData(path):
 try:
 	st.write("# Query Expansion Using KG (influenster)")
 	col1, col2, col3, col10, col11 = st.beta_columns(5)
-	keywords, linked_seed_keywords, contexts = loadData("../JSONdata/keyword_expansion_demo_APDO_influenster_full.json")
+	st.write("HI")
+	keywords, linked_seed_keywords, contexts = loadData("..//keyword_expansion_demo_APDO_influenster_full.json")
 	data = pd.DataFrame(keywords,columns =['linked_seed_keyword','keyword',"Frequecy Score",'Relevance Score','specificity'])
 	#data = data.set_index('linked_seed_keyword', append=True).swaplevel(0,1)
 	h = list(data["linked_seed_keyword"])
