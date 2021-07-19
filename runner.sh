@@ -1,1 +1,1 @@
-streamlit run streamlit_apps/keyword_expansion_dashboard.py
+streamlit run main.py --server.port 8501 &
