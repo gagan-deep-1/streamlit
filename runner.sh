@@ -1,2 +1,2 @@
-pip install -r requirments.txt
-streamlit run main.py --server.port 8501 &
+pip install -r requirements.txt
+streamlit run main.py --server.port 8501
